@@ -13,7 +13,7 @@ import java.util.List;
 @RestController
 @RequestMapping("test")
 public class TestController {
-    //返回一个实体
+    //返回一个实体2
     @GetMapping("{msg}")
     public Mono<String> sayHelloWorld(@PathVariable("msg") String msg) {
         System.out.println("come on " + msg);
