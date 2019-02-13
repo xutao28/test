@@ -1,0 +1,24 @@
+spring:
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    druid:
+      url: jdbc:mysql://localhost:3306/mybatis
+      username: root
+      password: 123
+  application:
+    name: sc-provider
+  profiles:
+    active: test
+logging:
+  level:
+    root: info
+    org.hibernate : info
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
+    com.yasaka.stock : debug
+server:
+  port: 2002
